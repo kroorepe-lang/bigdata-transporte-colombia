@@ -87,3 +87,35 @@ RNDC (Datos crudos)
    - Dashboards interactivos
    - KPIs de tarifas históricas
    - Comparación de rutas
+
+     ## Mockup del Dashboard – RNDC (Camiones de 3 ejes)
+
+---------------------------------------------------------
+|                Evolución de Tarifas                  |
+|   (Gráfica de líneas: tarifa promedio por mes/año)   |
+|   Filtro: Selección de ruta                          |
+---------------------------------------------------------
+
+---------------------------------------------------------
+|   Mapa de Colombia con las 10 rutas más transitadas  |
+|   (Color por nivel de tarifa promedio)               |
+---------------------------------------------------------
+
+---------------------------------------------------------
+|   Tabla Comparativa de Rutas                         |
+|   Ruta | Tarifa Promedio | Tarifa Mín | Tarifa Máx   |
+|   Filtros: Año / Mes                                |
+---------------------------------------------------------
+
+---------------------------------------------------------
+|   KPIs Principales                                   |
+|   - Tarifa promedio nacional                         |
+|   - Ruta más costosa                                 |
+|   - Ruta más económica                               |
+|   - Variación % último año                           |
+---------------------------------------------------------
+
+---------------------------------------------------------
+|   Gráfica de Barras: Top 10 Rutas por tarifa         |
+|   (Ordenadas de mayor a menor)                       |
+---------------------------------------------------------
