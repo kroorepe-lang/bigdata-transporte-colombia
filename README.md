@@ -65,17 +65,20 @@ Este proyecto no solo tiene un valor académico, sino también práctico, ya que
 RNDC (Datos crudos) 
         │
         ▼
+  
    [Bronze Layer]
    - Ingesta de datos
    - Almacenamiento inicial
         │
         ▼
+  
    [Silver Layer]
    - Limpieza de columnas
    - Filtrado de camiones de 3 ejes
    - Selección de 10 rutas más transitadas
         │
         ▼
+  
    [Gold Layer]
    - Dataset listo para análisis
         │
