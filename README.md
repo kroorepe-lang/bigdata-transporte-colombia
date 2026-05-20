@@ -1,9 +1,9 @@
 # Proyecto Big Data – Transporte de Carga (Camiones de Tres Ejes)
 
-##  Planteamiento del problema
+## Planteamiento del problema
 El transporte de carga terrestre en Colombia es un eje estratégico para la competitividad nacional. En particular, los camiones de tres ejes cumplen un papel esencial en el movimiento de mercancías en las principales rutas del país.  
 
-El RNDC (Registro Nacional de Despacho de Carga)** centraliza la información de los despachos, pero los datos se presentan en formatos extensos y poco amigables para el análisis directo. Esto genera retos como:  
+El RNDC (Registro Nacional de Despacho de Carga) centraliza la información de los despachos, pero los datos se presentan en formatos extensos y poco amigables para el análisis directo. Esto genera retos como:  
 - La identificación rápida de tendencias históricas de tarifas.  
 - El seguimiento específico de rutas y tipos de vehículos.  
 - La transformación de datos crudos en información útil para la toma de decisiones.  
@@ -12,8 +12,6 @@ Por ello, se plantea el desarrollo de una solución basada en Big Data, que perm
 - Procesar los datos del RNDC en capas (bronze, silver, gold).  
 - Filtrar y analizar las 10 rutas más transitadas del país para camiones de tres ejes.  
 - Generar visualizaciones en Power BI que faciliten el análisis de tarifas históricas y comparaciones entre rutas.  
-
-
 
 ## Justificación
 El transporte de carga terrestre es un componente vital para la economía colombiana, y los camiones de tres ejes representan una parte significativa del flujo de mercancías en las principales rutas del país.  
@@ -26,96 +24,78 @@ La aplicación de técnicas de Big Data permite superar estas limitaciones, ofre
 
 Este proyecto no solo tiene un valor académico, sino también práctico, ya que responde a necesidades reales del sector en el que trabajamos, aportando herramientas modernas para mejorar la competitividad y la planificación logística.  
 
-
-
 ## Objetivos
-- General: 
+- General:  
   Desarrollar un sistema de análisis de datos de transporte de carga en Colombia, enfocado en camiones de tres ejes y en las 10 rutas más transitadas, utilizando Databricks y Power BI.  
 
-- Específicos:
+- Específicos:  
   - Ingestar datos del RNDC mediante descargas abiertas o scraping.  
-  - Organizar la información en capas de almacenamiento (*bronze*, *silver*, *gold*).  
-  - Automatizar el flujo de procesamiento con **Jobs** en Databricks.  
+  - Organizar la información en capas de almacenamiento (bronze, silver, gold).  
+  - Automatizar el flujo de procesamiento con Jobs en Databricks.  
   - Generar visualizaciones interactivas en Power BI para analizar tarifas históricas en las rutas seleccionadas.  
 
-
-
-## ⚙️ Metodología
-1. Ingesta (Bronze):
+## Metodología
+1. Ingesta (Bronze):  
    - Recolección de datos del RNDC y fuentes oficiales.  
    - Almacenamiento en formato crudo.  
 
-2. Transformación (Silver): 
+2. Transformación (Silver):  
    - Limpieza de columnas, normalización de tipos de datos.  
    - Filtrado exclusivo de camiones de tres ejes y selección de las 10 rutas más transitadas.  
 
-3. Visualización (Gold/Power BI): 
+3. Visualización (Gold/Power BI):  
    - Conexión de Power BI a Databricks.  
    - Creación de dashboards con KPIs: evolución de tarifas, comparación de rutas, costos promedio.  
 
-
-
 ## Herramientas
-- **Databricks:** Plataforma de procesamiento y análisis de Big Data.  
+- Databricks: Plataforma de procesamiento y análisis de Big Data.  
 - Power BI: Visualización interactiva de resultados.  
-- GitHub: Control de versiones y documentación del proyecto.
+- GitHub: Control de versiones y documentación del proyecto.  
 
-- ##  Flujo del Proyecto
+## Flujo del Proyecto
+RNDC (Datos crudos)  
+        │  
+        ▼  
+[Bronze Layer]  
+- Ingesta de datos  
+- Almacenamiento inicial  
+        │  
+        ▼  
+[Silver Layer]  
+- Limpieza de columnas  
+- Filtrado de camiones de 3 ejes  
+- Selección de 10 rutas más transitadas  
+        │  
+        ▼  
+[Gold Layer]  
+- Dataset listo para análisis  
+        │  
+        ▼  
+Power BI (Visualización)  
+- Dashboards interactivos  
+- KPIs de tarifas históricas  
+- Comparación de rutas  
 
-RNDC (Datos crudos) 
-        │
-        ▼
-  
-   [Bronze Layer]
-   - Ingesta de datos
-   - Almacenamiento inicial
-        │
-        ▼
-  
-   [Silver Layer]
-   - Limpieza de columnas
-   - Filtrado de camiones de 3 ejes
-   - Selección de 10 rutas más transitadas
-        │
-        ▼
-  
-   [Gold Layer]
-   - Dataset listo para análisis
-        │
-        ▼
-   Power BI (Visualización)
-   - Dashboards interactivos
-   - KPIs de tarifas históricas
-   - Comparación de rutas
+## Dashboards en Power BI
+1. Tarjetas KPI  
+   - Tarifa Base  
+   - Tarifa Optimista (+10%)  
+   - Tarifa Pesimista (-10%)  
 
-     ## Mockup del Dashboard – RNDC (Camiones de 3 ejes)
+2. Gráfico de barras agrupadas  
+   - Eje Y: Rutas (Origen → Destino)  
+   - Eje X: Tarifa Base, Optimista y Pesimista  
 
----------------------------------------------------------
-|                Evolución de Tarifas                  |
-|   (Gráfica de líneas: tarifa promedio por mes/año)   |
-|   Filtro: Selección de ruta                          |
----------------------------------------------------------
+3. Tabla resumen  
+   - Ruta  
+   - Número de viajes  
+   - Tarifa promedio  
+   - Tarifa Base  
+   - Tarifa Optimista  
+   - Tarifa Pesimista  
 
----------------------------------------------------------
-|   Mapa de Colombia con las 10 rutas más transitadas  |
-|   (Color por nivel de tarifa promedio)               |
----------------------------------------------------------
-
----------------------------------------------------------
-|   Tabla Comparativa de Rutas                         |
-|   Ruta | Tarifa Promedio | Tarifa Mín | Tarifa Máx   |
-|   Filtros: Año / Mes                                |
----------------------------------------------------------
-
----------------------------------------------------------
-|   KPIs Principales                                   |
-|   - Tarifa promedio nacional                         |
-|   - Ruta más costosa                                 |
-|   - Ruta más económica                               |
-|   - Variación % último año                           |
----------------------------------------------------------
-
----------------------------------------------------------
-|   Gráfica de Barras: Top 10 Rutas por tarifa         |
-|   (Ordenadas de mayor a menor)                       |
----------------------------------------------------------
+4. Conclusiones  
+   - Buenaventura → Bogotá y Cartagena → Bogotá son las rutas más críticas.  
+   - En escenario optimista superan los 19–20 millones.  
+   - En escenario pesimista bajan a 16–18 millones.  
+   - Estas rutas concentran el mayor tráfico y son estratégicas para la rentabilidad.  
