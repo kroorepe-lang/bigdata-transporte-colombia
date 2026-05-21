@@ -22,11 +22,11 @@ La aplicación de técnicas de Big Data permite superar estas limitaciones, ofre
 - Filtrar información relevante para las 10 rutas más transitadas del país.  
 - Proporcionar indicadores claros y visualizaciones interactivas que apoyen la toma de decisiones estratégicas en el sector transporte.  
 
-Este proyecto no solo tiene un valor académico, sino también práctico, ya que responde a necesidades reales del sector en el que trabajamos, aportando herramientas modernas para mejorar la competitividad y la planificación logística.  
+Este proyecto no solo tiene un valor académico, sino también práctico, ya que responde a necesidades reales del sector en el que trabajamos, aportando herramientas modernas, eficaces y eficientes,  para el entendimiento del Sector transporte como modelo de Negocio,  mejorar la competitividad y la planificación logística.  
 
 ## Objetivos
 - General:  
-  Desarrollar un sistema de análisis de datos de transporte de carga en Colombia, enfocado en camiones de tres ejes y en las 10 rutas más transitadas, utilizando Databricks y Power BI.  
+  Desarrollar un sistema de análisis de datos de transporte de carga en Colombia, enfocado en camiones de tres ejes y en las 10 rutas más transitadas en Colombia, utilizando Databricks y Power BI como visualizador.  
 
 - Específicos:  
   - Ingestar datos del RNDC mediante descargas abiertas o scraping.  
@@ -41,7 +41,7 @@ Este proyecto no solo tiene un valor académico, sino también práctico, ya que
 
 2. Transformación (Silver):  
    - Limpieza de columnas, normalización de tipos de datos.  
-   - Filtrado exclusivo de camiones de tres ejes y selección de las 10 rutas más transitadas.  
+   - Filtrado exclusivo de camiones de tres ejes y selección de las 10 rutas más transitadas.(Muesta Objetivo dado que la fuente de datos contiene todos los tipos de transporte, era necesario especificar el tipo de transporte con el fin de garantizar un analisis mas especializado y no tan generalizado). 
 
 3. Visualización (Gold/Power BI):  
    - Conexión de Power BI a Databricks.  
