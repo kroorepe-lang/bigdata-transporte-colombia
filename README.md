@@ -1,4 +1,13 @@
+
+
 # Proyecto Big Data – Transporte de Carga (Camiones de Tres Ejes)
+
+## Integrantes del Proyecto
+
+- Carolina Orejuela Perea  
+- Jessica Andiry Ospina Valencia  
+- Jhonatan Rojas Cardona
+
 
 ## Planteamiento del problema
 El transporte de carga terrestre en Colombia es un eje estratégico para la competitividad nacional. En particular, los camiones de tres ejes cumplen un papel esencial en el movimiento de mercancías en las principales rutas del país.  
